@@ -1,0 +1,82 @@
+.header {
+  min-height: 70px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  overflow: hidden;
+  background-color: lightgray;
+  opacity: 0.8;
+}
+
+.header a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+}
+.header a:hover {
+  color: lightseagreen;
+  text-decoration: none;
+}
+
+.nav-bar {
+  display: flex;
+}
+
+.nav-bar ul li {
+  list-style: none;
+  display: inline-block;
+}
+.nav-bar ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0 15px;
+}
+.nav-bar ul li a:hover {
+  color: lightseagreen;
+}
+
+.nav-cart {
+  position: relative;
+}
+.header .menu,
+.header .close {
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 650px) {
+  .header {
+    opacity: 1;
+  }
+  .header .menu {
+    display: flex;
+    justify-content: center;
+  }
+  .header ul {
+    margin-top: -1rem;
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 93%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    background: white;
+    z-index: 99;
+    transition: 0.5s linear;
+    opacity: 1;
+  }
+  .header .menu,
+  .header .close {
+    display: block;
+  }
+  .header .close {
+    position: absolute;
+    top: 15px;
+    right: 14px;
+  }
+  .header ul.toggle {
+    top: 0;
+  }
+}

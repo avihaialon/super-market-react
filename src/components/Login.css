@@ -1,0 +1,48 @@
+.login-form {
+  width: 320px;
+  box-sizing: border-box;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+h1 {
+  text-align: center;
+  color: white;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+h3 {
+  text-align: center;
+  color: white;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+input {
+  width: 100%;
+  background: none;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  padding: 6px 15px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: white;
+}
+button {
+  width: 100%;
+  border: 0;
+  cursor: pointer;
+}
+
+.register {
+  display: inline;
+  font-size: 15px;
+}
+.register a {
+  color: red;
+}
+.register a:hover {
+  color: lightseagreen;
+  text-decoration: none;
+}
