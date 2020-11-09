@@ -17,7 +17,7 @@ app.use(bodyParser.json());
 
 
 const connectToDB = () => {
-  return mongoose.connect(process.env.MONGO_URI||'mongodb://localhost:27017', {
+  return mongoose.connect(process.env.MONGO_URI||'mongodb://localhost:27017/users', {
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true,
@@ -74,7 +74,6 @@ app.post("/login", async (req, res) => {
     if (!isMatch) {
       return res.send({ error: "Incorrect password" });
     }
-
     const payload = { id: user._id, name: user.name };
     const token = jwt.sign(payload, process.env.JWT_KEY, { expiresIn: "1h" });
     res.send({ token, name: user.name });
@@ -99,6 +98,10 @@ app.get("/verify", auth, (req, res) => {
     res.send({ error: err.message });
   }
 });
+
+if(process.env.NODE_ENV==='production'){
+  app.use(express.static("client/build"));
+}
 
 app.listen(PORT, () => {
   console.log(`listening to port ${PORT}`);

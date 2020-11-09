@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/static/css/main.319b821d.chunk.css",
+    "main.js": "/static/js/main.fef9f5b3.chunk.js",
+    "main.js.map": "/static/js/main.fef9f5b3.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.3bcfb0d2.js",
+    "runtime-main.js.map": "/static/js/runtime-main.3bcfb0d2.js.map",
+    "static/css/2.05569058.chunk.css": "/static/css/2.05569058.chunk.css",
+    "static/js/2.b76a8d6d.chunk.js": "/static/js/2.b76a8d6d.chunk.js",
+    "static/js/2.b76a8d6d.chunk.js.map": "/static/js/2.b76a8d6d.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.ec37a77f184519bb33355edc0cdc9e61.js": "/precache-manifest.ec37a77f184519bb33355edc0cdc9e61.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.05569058.chunk.css.map": "/static/css/2.05569058.chunk.css.map",
+    "static/css/main.319b821d.chunk.css.map": "/static/css/main.319b821d.chunk.css.map",
+    "static/js/2.b76a8d6d.chunk.js.LICENSE.txt": "/static/js/2.b76a8d6d.chunk.js.LICENSE.txt",
+    "static/media/cheese.jpg": "/static/media/cheese.52b99ad2.jpg",
+    "static/media/cornflex.jpg": "/static/media/cornflex.49be50f9.jpg",
+    "static/media/cucumber.jpg": "/static/media/cucumber.e49ccc87.jpg",
+    "static/media/matches.jpg": "/static/media/matches.8dfb10ba.jpg",
+    "static/media/milk.jpg": "/static/media/milk.76c7e39e.jpg",
+    "static/media/oil.jpg": "/static/media/oil.d7c44acc.jpg",
+    "static/media/toiletPaper.jpg": "/static/media/toiletPaper.5a07cad2.jpg",
+    "static/media/water.jpg": "/static/media/water.bdc67306.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3bcfb0d2.js",
+    "static/css/2.05569058.chunk.css",
+    "static/js/2.b76a8d6d.chunk.js",
+    "static/css/main.319b821d.chunk.css",
+    "static/js/main.fef9f5b3.chunk.js"
+  ]
+}
