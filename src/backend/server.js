@@ -5,7 +5,6 @@ const cors = require("cors");
 const dotenv = require("dotenv");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
-const cookieParser = require("cookie-parser");
 const auth = require("./auth");
 
 dotenv.config();
@@ -19,7 +18,7 @@ app.use(
   })
 );
 app.use(bodyParser.json());
-app.use(cookieParser());
+
 
 const connectToDB = () => {
   return mongoose.connect(process.env.MONGO_URI, {
