@@ -21,7 +21,7 @@ app.use(bodyParser.json());
 
 
 const connectToDB = () => {
-  return mongoose.connect(process.env.MONGO_URI, {
+  return mongoose.connect(process.env.MONGO_URI||'mongodb://localhost:27017', {
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true,
