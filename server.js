@@ -35,9 +35,23 @@ const userSchema = new mongoose.Schema({
 });
 const User = mongoose.model("User", userSchema);
 
+validateEmail = ( email ) => {
+let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+if ( re.test(email) ) {
+      return true
+  }
+  else {
+      return false
+  }
+}
+
 app.post("/register", async (req, res) => {
   try {
     const { name, email, password, repeatPassword } = req.body;
+    if(!validateEmail(email)){
+      return res.send({error:"Incorrect email address"})
+    };
     if (name.length < 2 || name.length > 8)
       return res.send({
         error:
@@ -67,6 +81,7 @@ app.post("/register", async (req, res) => {
 app.post("/login", async (req, res) => {
   try {
     const { email, password } = req.body;
+
     const user = await User.findOne({ email });
     if (!user) {
       return res.send({ error: "This user does not exist!" });
