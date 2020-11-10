@@ -14,7 +14,7 @@ const Register = () => {
   let newUser = {};
   const addUser = () => {
     axios
-      .post("http://localhost:3200/register", newUser)
+      .post("/register", newUser)
       .then((res) => {
         if (res.data.error) {
           toast.error(res.data.error, {

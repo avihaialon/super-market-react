@@ -182,7 +182,7 @@ export class DataProvider extends React.Component {
       const userName = localStorage.getItem("userName");
       this.setState({ userName: userName });
       if (token) {
-        const verified = await axios.get("http://localhost:3200/verify", {
+        const verified = await axios.get("/verify", {
           headers: { Authorization: token },
         });
         if (verified.data === true) {

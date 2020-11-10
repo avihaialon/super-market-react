@@ -7,6 +7,7 @@ import { dataContext } from "../Context";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+
 toast.configure();
 class Login extends Component {
   static contextType = dataContext;
@@ -17,7 +18,7 @@ class Login extends Component {
 
     let enterUser = {};
     const entering = () => {
-      axios.post("http://localhost:3200/login", enterUser).then((res) => {
+      axios.post("/login", enterUser).then((res) => {
         if (res.data.error) {
           toast.error(res.data.error, {
             position: toast.POSITION.TOP_CENTER,
