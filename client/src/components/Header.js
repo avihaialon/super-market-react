@@ -25,6 +25,11 @@ class Header extends Component {
   };
   menuToggle = () => {
     this.setState({ toggle: !this.state.toggle });
+    if(!this.state.toggle){
+      document.body.style.position="fixed";
+    }else{
+      document.body.style.position="";
+    }
   };
 
   logout = () => {
