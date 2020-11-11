@@ -53,7 +53,8 @@
     justify-content: center;
   }
   .header ul {
-    margin-top: -1rem;
+    margin-top: -6rem;
+    padding-top: 2.55rem;
     position: fixed;
     top: -100%;
     left: 0;
